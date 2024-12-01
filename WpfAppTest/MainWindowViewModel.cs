@@ -84,20 +84,22 @@ namespace WpfAppTest
 
 		private async void UpdateWeatherDialog(object commandParameter)
 		{
+			if (commandParameter == null)
+			{
+				return;
+			}
 			var dialog = new EditWeatherPopup();
 			var vm = new EditWeatherPopupVM();
 
-			if (commandParameter != null) 
+			var updatingWeather = (WeatherForecast)commandParameter;
+			vm.weatherForecast = new WeatherForecast()
 			{
-				var updatingWeather = (WeatherForecast)commandParameter;
-				vm.weatherForecast = new WeatherForecast()
-				{
-					Id = updatingWeather.Id,
-					Date = updatingWeather.Date,
-					TemperatureC = updatingWeather.TemperatureC,
-					Summary = updatingWeather.Summary
-				};
-			}
+				Id = updatingWeather.Id,
+				Date = updatingWeather.Date,
+				TemperatureC = updatingWeather.TemperatureC,
+				Summary = updatingWeather.Summary
+			};
+
 			dialog.DataContext = vm;
 
 			if (dialog.ShowDialog() == true)

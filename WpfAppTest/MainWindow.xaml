@@ -36,7 +36,7 @@
 
 		<DataGrid x:Name="weatherForecastsDataGrid" ItemsSource="{Binding WeatherForecasts}" Grid.Row="1"  AutoGenerateColumns="False" IsReadOnly="True">
 			<DataGrid.Columns>
-				<DataGridTextColumn Binding="{Binding Date, StringFormat={}{0:dd/MM/yyyy}}" Header="Дата" />
+				<DataGridTextColumn Binding="{Binding Date, StringFormat={}{0:dd.MM.yyyy}}" Header="Дата" />
 				<DataGridTextColumn Binding="{Binding TemperatureC}" Header="Температура С"/>
 				<DataGridTextColumn Binding="{Binding TemperatureF}" Header="Температура F"/>
 				<DataGridTextColumn Binding="{Binding Summary}" Header="Итог"/>

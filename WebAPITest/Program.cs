@@ -27,7 +27,6 @@ namespace WebAPITest
 
 
 			app.MapControllers();
-			app.MapDelete("WeatherForecastController/{id}", (string id) => ..);
 
 			app.Run();
 		}

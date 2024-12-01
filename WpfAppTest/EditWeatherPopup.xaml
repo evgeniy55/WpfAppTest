@@ -31,7 +31,7 @@
 		<DatePicker x:Name="weatherDatePicker" Grid.Row="0" Grid.Column="1" Text="{Binding weatherForecast.Date, StringFormat={}{0:dd/MM/yyyy}}"  />
 
 		<TextBlock Grid.Row="1" Grid.Column="0" Text="Температура С" />
-		<TextBox x:Name="weatherTemp" Grid.Row="1" Grid.Column="1" Text="{Binding weatherForecast.TemperatureC}"  />
+		<TextBox x:Name="weatherTemp" Grid.Row="1" Grid.Column="1" Text="{Binding weatherForecast.TemperatureC, UpdateSourceTrigger=PropertyChanged, StringFormat=N0}" />
 
 		<TextBlock Grid.Row="2" Grid.Column="0" Text="Вывод" />
 		<TextBox x:Name="weatherSummary" Grid.Row="2" Grid.Column="1" Text="{Binding weatherForecast.Summary}" />
