@@ -1,0 +1,13 @@
+@WebAPITest_HostAddress = http://localhost:5178
+
+GET {{WebAPITest_HostAddress}}/WeatherForecasts/GetRandom
+Accept: application/json
+###
+
+GET {{WebAPITest_HostAddress}}/WeatherForecasts/GetWeatherForecasts
+Accept: application/json
+###
+
+GET {{WebAPITest_HostAddress}}/WeatherForecasts/Add
+Accept: application/json
+###
